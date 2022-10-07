@@ -11,7 +11,7 @@ export default abstract class Operation {
   }
 
   public toString() {
-    return `(${this.left} + ${this.right})`
+    return `(${this.left} ${this.operator} ${this.right})`
   }
 
   abstract result(): number
