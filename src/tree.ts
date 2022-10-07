@@ -8,21 +8,14 @@ export const Node = (operator: string, value: number | null, left: any, right: a
 
     return new OPERATION_CLASS[operator](left.result(), right.result()).result()
   };
-
   const toString = function () {
-    switch (operator) {
-      case "+":
-        return `(${left.toString()} + ${right.toString()})`;
-      case "-":
-        return `(${left.toString()} - ${right.toString()})`;
-      case "x":
-        return `(${left.toString()} x ${right.toString()})`;
-      case "÷":
-        return `(${left.toString()} ÷ ${right.toString()})`;
-      default:
-        return value.toString();
+    if (!OPERATION_CLASS?.[operator]) {
+      return value
     }
+
+    return new OPERATION_CLASS[operator](left.toString(), right.toString()).toString()
   };
+
 
   return {
     operator,
