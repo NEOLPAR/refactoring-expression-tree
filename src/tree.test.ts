@@ -1,4 +1,3 @@
-import {strictEqual} from 'assert';
 import {Node}        from './tree'
 
 describe('Node function', () => {

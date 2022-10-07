@@ -20,8 +20,8 @@ const tree = Tree.Node(
   Tree.Node("", 6, null, null)
 );
 
-console.log("((7 + ((3 - 2) x 5)) ÷ 6)", tree.toString());
-console.log(2, tree.result());
+// console.log("((7 + ((3 - 2) x 5)) ÷ 6)", tree.toString());
+// console.log(2, tree.result());
 
 export {
   Tree
