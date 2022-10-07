@@ -1,6 +1,6 @@
 import {OPERATION_CLASS} from "./classes/Operation";
 
-export const Node = (operator: string, value: number | null, left: any, right: any) => {
+export const Node = (operator: string, value: number | null, left = null, right = null) => {
   const result = function () {
     if (!OPERATION_CLASS?.[operator]) {
       return value
