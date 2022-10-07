@@ -2,15 +2,11 @@ import {OPERATION_CLASS} from "./classes/Operation";
 
 export const Node = (operator: string, value: number | null, left: any, right: any) => {
   const result = function () {
-    console.log(1, OPERATION_CLASS, operator, OPERATION_CLASS?.[operator])
-
     if (!OPERATION_CLASS?.[operator]) {
       return value
     }
 
-    const operation = new OPERATION_CLASS[operator](left, right)
-    console.log(1, operation.result())
-    return new OPERATION_CLASS[operator](left, right).result()
+    return new OPERATION_CLASS[operator](left.result(), right.result()).result()
   };
 
   const toString = function () {

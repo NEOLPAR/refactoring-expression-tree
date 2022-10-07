@@ -8,7 +8,7 @@ describe('Division class tests', () => {
     const division = new Division(left, right)
 
     const actual   = division.toString()
-    const expected = `(${left} / ${right})`
+    const expected = `(${left} ÷ ${right})`
 
     expect(actual).toStrictEqual(expected)
   })

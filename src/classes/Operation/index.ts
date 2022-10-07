@@ -8,6 +8,6 @@ export * from './Operation'
 export const OPERATION_CLASS = {
   '+': Sum,
   '-': Subtraction,
-  '*': Multiplication,
+  'x': Multiplication,
   '÷': Division,
 }

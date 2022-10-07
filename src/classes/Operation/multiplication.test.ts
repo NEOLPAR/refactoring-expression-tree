@@ -8,7 +8,7 @@ describe('Multiplication class tests', () => {
     const multiplication = new Multiplication(left, right)
 
     const actual   = multiplication.toString()
-    const expected = `(${left} * ${right})`
+    const expected = `(${left} x ${right})`
 
     expect(actual).toStrictEqual(expected)
   })
