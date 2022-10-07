@@ -1,17 +1,16 @@
-export const Node = (operator: any, value: any, left: any, right: any) => {
+import {OPERATION_CLASS} from "./classes/Operation";
+
+export const Node = (operator: string, value: number | null, left: any, right: any) => {
   const result = function () {
-    switch (operator) {
-      case "+":
-        return left.result() + right.result();
-      case "-":
-        return left.result() - right.result();
-      case "x":
-        return left.result() * right.result();
-      case "÷":
-        return left.result() / right.result();
-      default:
-        return value;
+    console.log(1, OPERATION_CLASS, operator, OPERATION_CLASS?.[operator])
+
+    if (!OPERATION_CLASS?.[operator]) {
+      return value
     }
+
+    const operation = new OPERATION_CLASS[operator](left, right)
+    console.log(1, operation.result())
+    return new OPERATION_CLASS[operator](left, right).result()
   };
 
   const toString = function () {

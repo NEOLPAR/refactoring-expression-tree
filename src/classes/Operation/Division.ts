@@ -2,7 +2,7 @@ import Operation from './Operation'
 
 export default class Division extends Operation {
   constructor(left: number, right: number) {
-    super('/', left, right);
+    super('÷', left, right);
   }
 
   public result(): number {

@@ -1,4 +1,4 @@
-import {Node}        from './tree'
+import {Node} from './tree'
 
 describe('Node function', () => {
   let tree;
